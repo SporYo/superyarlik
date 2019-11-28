@@ -1,0 +1,329 @@
+@import './color.sass';
+
+
+// font-family: 'Open Sans', sans-serif;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+}
+
+
+// header
+
+.tape-market {
+    width: 100%;
+    height: 320px;
+    background-image: url(/build/img/bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.tape-market__container {
+    width: 1281px;
+    margin: 0 auto;
+}
+
+
+
+.tape-market__title {
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #f6f2ef;
+    font-size: 35px;
+}
+
+.tape-market__subtitle {
+    color: #f6f2ef;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.tape-market__items {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tape-market__item {
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+    }
+}
+
+.tape-market__item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    .tape-market__item_title {
+        color: #dd6c29;
+    }
+}
+
+.tape-market__item_title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+    color: #000;
+}
+
+.tape-market__item_quantity,
+.tape-market__item_time {
+    font-size: 15px;
+    color: #a5a5a5;
+}
+
+.tape-market__item_quantity {
+    margin-bottom: 5px;
+}
+
+.tape-market__item_time {
+    margin-top: 5px;
+}
+
+.tape-market__item_quantity--green {
+    color: #39b54a;
+}
+
+// ========== Страница карточки товара ========== //
+
+.tape-card {
+    background: #f7f7f7;
+}
+
+.tape-card__container {
+    width: 1281px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.tape-card__top {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.tape-card__right_title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+.tape-card__right_left {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start;
+
+    button {
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        color: #444444;
+        letter-spacing: 0.7px;
+        font-weight: 600;
+        background-color: #efbf00;
+        border: none;
+        padding: 18px 27px;
+        margin-bottom: 40px;
+    }
+
+    button:hover {
+        color: #444444;
+        background-color: #fafd1f;
+        transition: .5s;
+    }
+}
+
+.tape-card__left_img {
+    padding: 52px 28px 49px 43px;
+}
+
+.tape-card__left,
+.tape-card__right {
+    border: 1px solid #e8e8e8;
+}
+
+.tape-card__left {
+    border-left: none;
+    border-top: none;
+}
+
+.tape-card__right {
+    border: 1px solid #e8e8e8;
+    border-left: none;
+    padding-left: 30px;
+    border-right: none;
+    border-top: none;
+}
+
+.tape-card__right_characteristics {
+    display: flex;
+    flex-direction: row;
+}
+
+.tape-card__right_left--mod {
+    color: #ffffff;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: #5ebb2e;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.tape-card__right_left--mod::before {
+    content: "\2713";
+    columns: #ffffff;
+    margin-right: 3px;
+}
+
+.tape-card__basket {
+    color: #5ebb2e;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.tape-card__basket:hover {
+    color: #498f26;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tape-card__basket::after {
+    content: '';
+    display: block;
+    border-bottom: 1px dotted #5ebb2e;
+    position: relative;
+    top: 0;
+    left: 23px;
+    width: 115px;
+}
+
+.tape-card__basket::before {
+    content: url(/build/img/card/shopping-cart.png);
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.tape-card__basket--mod {
+    color: #fff;
+    background: #efbf00c4;
+    margin-left: 3px;
+    border-radius: 50%;
+    padding: 1px 5px;
+    border-bottom: none;
+}
+
+.tape-card__right-options {
+    margin-left: 160px;
+}
+
+.right-options__title {
+    margin: 0;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.right-options__title_item {
+    color: #39b54a;
+    margin-left: 18px;
+    span {
+        color: #8f8f8f;
+        font-size: 14px;
+    }
+}
+
+.right-options__title_item:nth-child(1) {
+    margin-top: 10px;
+}
+
+.tape-card__slick {
+    display: flex;
+    justify-content: center;
+}
+
+.slick {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+.slick__item img{
+    width: 160px;
+    height: 120px;
+    margin: 15px;
+}
+
+.slick-prev:before {
+    content: url(../../build/img/card/arr-left.png);
+    position: relative;
+}
+.slick-next:before {
+    content: url(../../build/img/card/arr-right.png);
+    position: relative;
+}
+
+.tape-card__bottom {
+    background: #f7f7f7;
+}
+
+.tape-card__bottom_btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom_btn {
+    font-size: 12px;
+    color: #444444;
+    text-transform: uppercase;
+    padding: 7px 29px;
+    background: #fff;
+    margin-right: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.bottom_btn--active {
+    background: #39b54a;
+    color: #fff;
+}
+
+.bottom_btn:nth-child(1) {
+    margin-left: 30px;
+}
+
+.tape-card__bottom_context {
+    padding-bottom: 100px;
+}
+
+.context__description,
+.context__characteristics,
+.context__delivery {
+    background: #fff;
+    padding: 40px 60px;
+    border-top: 1px solid #e8e8e8;
+    height: 200px;
+    p {
+        font-size: 16px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+@import './media.scss'
